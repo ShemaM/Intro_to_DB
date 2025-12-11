@@ -1,6 +1,10 @@
-
-CREATE DATABASE alx_book_store;
-
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'alx_book_store')
+BEGIN
+    CREATE DATABASE alx_book_store;
+END
+GO
+USE alx_book_store;
+GO
 
 CREATE TABLE Authors(
     author_id INT PRIMARY KEY,
