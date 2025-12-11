@@ -4,7 +4,7 @@ CREATE TABLE Books (
     author_id INT FOREIGN KEY REFERENCES Authors(author_id),
     price DECIMAL(10, 2),
     publication_date DATE,
-    stock INT DEFAULT 0
+    
 );
 
 CREATE TABLE Authors (
