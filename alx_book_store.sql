@@ -3,12 +3,20 @@ BEGIN
     CREATE DATABASE alx_book_store;
 END
 GO
+
 USE alx_book_store;
 GO
 
 CREATE TABLE Authors(
     author_id INT PRIMARY KEY,
     author_name VARCHAR(215)
+);
+
+CREATE TABLE Customers(
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(215),
+    email VARCHAR(215),
+    address TEXT
 );
 
 CREATE TABLE Books(
@@ -18,13 +26,6 @@ CREATE TABLE Books(
     price DECIMAL(10, 2),
     publication_date DATE,
     FOREIGN KEY (author_id) REFERENCES Authors(author_id)
-);
-
-CREATE TABLE Customers(
-    customer_id INT PRIMARY KEY,
-    customer_name VARCHAR(215),
-    email VARCHAR(215),
-    address TEXT
 );
 
 CREATE TABLE Orders(
